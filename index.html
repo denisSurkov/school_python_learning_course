@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Вводное занятие программирование 2019</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -25,11 +25,135 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
 				<section>
-					<h3>Программирование на Python</h3>
-					<p>Вводное занятие</p>
+					<section>	
+						<h3>Программирование на Python</h3>
+						<p>Вводное занятие - 29.09.2019</p>
+					</section>
+					<section data-markdown>
+						- Что такое программирование
+						- Почему Python
+						- Первая программа
+						- Мотивация обучения
+						- Способы обучения
+						- ...
+					</section>
+				</section>
+				<section>
+					Что такое программирование?
+				</section>
+				<section>
+					<p><q>Программи́рование — процесс создания компьютерных программ.</q></p>
+					<p><em>Wikipedia</em></p>
+				</section>
+				<section data-background-iframe="https://www.youtube.com/embed/HluANRwPyNo?autoplay=1" data-background-interactive>
+				</section>
+				<section>
+					<p>Программирование - написание инструкций <em>(алгоритмов)</em> для вычислительной машины</p>
+					<ol>
+						<li class="fragment fade-in">Открыть дверь</li>
+						<li class="fragment fade-in">Зайти в комнату</li>
+						<li class="fragment fade-in">Закрыть дверь</li>
+					</ol>
+				</section>
+				<section>
+					<p><q>Написание программы похоже на рассказ</q>.</p>
+					<p class="fragment fade-in">Главная цель - передать свою мысль</p>
+					<p class="fragment fade-in">Каждый это делает по-своему, учитывая определенные правила</p>
+				</section>
+				<section data-background-image="https://psv4.userapi.com/c848124/u165362985/docs/d10/3fab8a7b4164/Jan-23-2019_12-10-25.gif?extra=0XpXse6tVLNatQuPl8_RrIr2-mqitl82_XaCcIxEA_RLq2ej2fSVjG5-J-s3TM7Zf4QI6X7U2KwCAmANbSvp3lCtAPf3wK7wb9Dt4cY6q0VLDjD8C7RPrtk_D4g0YmDpFFef5FGNysRWs1EpXMCnIP8ipQ">
+					<h1 style="color: black;" class="fragment fade-in">Машинное обучение</h1>
+				</section>
+				<section data-background-image="https://lh3.googleusercontent.com/8W0i-nhkP2ujVf4v2ZeqFxJ4OrYki9_osCzEkfed93KCFSS5uswNrhcFKmzLt-K8KWjt3n7QJ58h4CXPyTdBWvJXhzwrNJdiS0-YLxfxF84Z_82A5O_wV5QLkLp-zRR1NVJQ_gp-prc">
+					<h1 style="color: black;" class="fragment fade-in">WEB Разработка</h1>
+				</section>
+				<section data-background-image="mobile_dev.png">
+					<h1 style="color: black;" class="fragment fade-in">Мобильная Разработка</h1>
+				</section>
+				<section data-background-video="https://vk.com/doc144749878_503851387?hash=e9fd2074c41f3256ca&dl=c776da3c146b13c5fd&wnd=1&module=profile&mp4=1">
+					<h1 style="color: black;" class="fragment fade-in">Все, что вы хотите</h1>
+				</section>
+				<section>
+					<p>Python</p>
+					<ul>
+						<li class="fragment fade-in">Прост в обучении</li>
+						<li class="fragment fade-in">Прост для установки</li>
+						<li class="fragment fade-in">Программа запускается тут же <em>(интерпретация)</em></li>
+						<li class="fragment fade-in">Учит хорошему стилю кода</li>
+					</ul>
+				</section>
+				<section>
+					<p>Компиляция VS Интерпретация</p>
+				</section>
+				<section>
+					<p>Компиляция</p>
+					<ul>
+						<li class="fragment fade-in">1 раз</li>
+						<li class="fragment fade-in">Считывает всю программу сразу (ошибки можно узнать заранее)</li>
+						<li class="fragment fade-in">После прочитывания работает очень быстро</li>
+						<li class="fragment fade-in">Процесс прочитывания занимает определенное время</li>
+					</ul>
+				</section>
+				<section>
+					<p>Интерпретация</p>
+					<ul>
+						<li class="fragment fade-in">Каждый раз заново</li>
+						<li class="fragment fade-in">Считывает программу в момент исполнения (ошибки будут видны только уже в процессе)</li>
+						<li class="fragment fade-in">Работает медленее (считывание)</li>
+						<li class="fragment fade-in">Можно сразу запускать, после внесения изменений</li>
+					</ul>
+				</section>
+				<section>
+					Первая программа
+				</section>
+				<section>
+					<p>- Создать программу, которая будет печатать</p>
+					<p>"Привет, <em>имя</em>!" </p>
+				</section>
+				<section>
+					<p class="fragment fade-in">имя (person)</p>
+					<p class="fragment fade-in">сказать привет (<code>say_hello</code>)</p>
+					<p class="fragment fade-in">печать (<span class="highlight-orange">print</span>)</p>
+				</section>
+				<section>
+					<pre>
+						<code  data-trim data-noescape>
+						def say_hello(person):
+							print("Hello " + person)
+
+						say_hello("Ivan")
+					</code>python my_program.py
+				</pre>
+				</section>
+				<section>
+					<p>Классно!
+						<span class="fragment fade-in">Но</span>
+						<span class="fragment fade in">, наверное,</span>
+						<span class="fragment fade-in"> скорее всего,</span>
+						<span class="fragment fade-in"> ничего не выйдет</span>
+						<span class="fragment fade-in">...</span>
+					</p>
+				</section>
+				<section>
+					Все будет хорошо
+				</section>
+				<section data-markdown>
+					Ресурсы:
+
+					- stepik.org
+					- freecodecamp.org
+					- coursera.com
+					- openedu.ru
+					- ulearn.me
+					- habr.com
+					- участие в тусовкаx
+					- ...
+				</section>
+				<section>
+					Почему все это происходит?
+				</section>
+				<section>
+					👋
 				</section>
 			</div>
 		</div>
