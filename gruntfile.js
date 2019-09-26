@@ -24,7 +24,7 @@ module.exports = grunt => {
 		},
 
 		qunit: {
-			files: [ 'test/*.html' ]
+			files: [ 'reveal-js-src/test/*.html' ]
 		},
 
 		uglify: {
@@ -33,8 +33,8 @@ module.exports = grunt => {
 				ie8: true
 			},
 			build: {
-				src: 'js/reveal.js',
-				dest: 'js/reveal.min.js'
+				src: 'reveal-js-src/js/reveal.js',
+				dest: 'reveal-js-src/js/reveal.min.js'
 			}
 		},
 
@@ -44,21 +44,21 @@ module.exports = grunt => {
 				sourceMap: false
 			},
 			core: {
-				src: 'css/reveal.scss',
-				dest: 'css/reveal.css'
+				src: 'reveal-js-src/css/reveal.scss',
+				dest: 'reveal-js-src/css/reveal.css'
 			},
 			themes: {
 				expand: true,
-				cwd: 'css/theme/source',
+				cwd: 'reveal-js-src/css/theme/source',
 				src: ['*.sass', '*.scss'],
-				dest: 'css/theme',
+				dest: 'reveal-js-src/css/theme',
 				ext: '.css'
 			}
 		},
 
 		autoprefixer: {
 			core: {
-				src: 'css/reveal.css'
+				src: 'reveal-js-src/css/reveal.css'
 			}
 		},
 
@@ -67,8 +67,8 @@ module.exports = grunt => {
 				compatibility: 'ie9'
 			},
 			compress: {
-				src: 'css/reveal.css',
-				dest: 'css/reveal.min.css'
+				src: 'reveal-js-src/css/reveal.css',
+				dest: 'reveal-js-src/css/reveal.min.css'
 			}
 		},
 
@@ -97,7 +97,7 @@ module.exports = grunt => {
 					require: false
 				}
 			},
-			files: [ 'gruntfile.js', 'js/reveal.js' ]
+			files: [ 'gruntfile.js', 'reveal-js-src/js/reveal.js' ]
 		},
 
 		connect: {
@@ -116,11 +116,11 @@ module.exports = grunt => {
 			bundle: {
 				src: [
 					'index.html',
-					'css/**',
-					'js/**',
-					'lib/**',
+					'reveal-js-src/css/**',
+					'reveal-js-src/js/**',
+					'reveal-js-src/lib/**',
 					'images/**',
-					'plugin/**',
+					'reveal-js-src/plugin/**',
 					'**.md'
 				],
 				dest: 'reveal-js-presentation.zip'
@@ -129,24 +129,24 @@ module.exports = grunt => {
 
 		watch: {
 			js: {
-				files: [ 'gruntfile.js', 'js/reveal.js' ],
+				files: [ 'gruntfile.js', 'reveal-js-src/js/reveal.js' ],
 				tasks: 'js'
 			},
 			theme: {
 				files: [
-					'css/theme/source/*.sass',
-					'css/theme/source/*.scss',
-					'css/theme/template/*.sass',
-					'css/theme/template/*.scss'
+					'reveal-js-src/css/theme/source/*.sass',
+					'reveal-js-src/css/theme/source/*.scss',
+					'reveal-js-src/css/theme/template/*.sass',
+					'reveal-js-src/css/theme/template/*.scss'
 				],
 				tasks: 'css-themes'
 			},
 			css: {
-				files: [ 'css/reveal.scss' ],
+				files: [ 'reveal-js-src/css/reveal.scss' ],
 				tasks: 'css-core'
 			},
 			test: {
-				files: [ 'test/*.html' ],
+				files: [ 'reveal-js-src/test/*.html' ],
 				tasks: 'test'
 			},
 			html: {
