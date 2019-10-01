@@ -95,7 +95,7 @@
 						<li class="fragment fade-in">Сложение (конкатенация) (name + " " + surname)</li>
 						<li class="fragment fade-in">ВЕРХНИЙ РЕГИСТР = name.upper()</li>
 						<li class="fragment fade-in">нижний регистр = name.lower()</li>
-						<li class="fragment fade-in">Каждое Слово С Заглавной = name.lower()</li>
+						<li class="fragment fade-in">Каждое Слово С Заглавной = name.title()</li>
 					</ul>
 				</section>
 				<section>
@@ -133,9 +133,9 @@
 				<section>
 					<pre>
 						<code data-trim data-noescape>
-							name = "Иван"
-							surname = "Иванов"
-							full_name = name + " " + surname
+							name = input("Введите ваше имя: ")
+							surname = input("Введите вашу фамилию: ")
+							full_name = name.lower() + " " + surname.upper()
 							print(full_name)
 						</code>
 					</pre>
@@ -143,9 +143,9 @@
 				<section>
 					<pre>
 						<code data-trim data-noescape  data-line-numbers="1-2">
-							name = "Иван"
-							surname = "Иванов"
-							full_name = name + " " + surname
+							name = input("Введите ваше имя: ")
+							surname = input("Введите вашу фамилию: ")
+							full_name = name.lower() + " " + surname.upper()
 							print(full_name)
 						</code>
 					</pre>
@@ -153,9 +153,9 @@
 				<section>
 					<pre>
 						<code data-trim data-noescape  data-line-numbers="3">
-							name = "Иван"
-							surname = "Иванов"
-							full_name = name + " " + surname
+							name = input("Введите ваше имя: ")
+							surname = input("Введите вашу фамилию: ")
+							full_name = name.lower() + " " + surname.upper()
 							print(full_name)
 						</code>
 					</pre>
