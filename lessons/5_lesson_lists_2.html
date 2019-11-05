@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Массивы, множества Python</title>
+
+		<link rel="stylesheet" href="../reveal-js-src/css/reset.css">
+		<link rel="stylesheet" href="../reveal-js-src/css/reveal.css">
+		<link rel="stylesheet" href="../reveal-js-src/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal-js-src/lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal-js-src/css/print/pdf.css' : 'reveal-js-src/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>	
+						<h3>Кортежи, множества - часть 2</h3>
+						<p>06.11.2019</p>
+					</section>
+					<section data-markdown>
+                            - Повтороение
+                            - Работа с кортежами и множествами
+                            - Практика
+                    </section>
+				</section>
+				<section>
+					Что такое массивы (списки)?
+				</section>
+				<section>
+					<img src="../assets/arrays_image.png" class="stretch">
+				</section>
+				<section>
+					<img src="../assets/arrays_interface.jpg" class="stretch">
+				</section>
+				<section>
+					<pre>
+						<code data-trim data-noescape>
+							students = ("Иван", "Андрей", "Игнат", "Илья")
+							print(students[0])  # Иван
+							
+							# Выдаст ошибку: кортеж нельзя изменять!
+							students[0] = "Денис" 
+						</code>
+					</pre>
+				</section>
+				<section>
+					<pre>
+						<code data-trim data-noescape>
+                            numbers = set()
+                            numbers.add(1)
+                            numbers.add(2)
+                            numbers.add(3)
+                            numbers.add(1)  # Повторение
+                            print(numbers)  # {1,2,3}
+						</code>
+					</pre>
+				</section>
+				<section data-markdown>
+                    [Практика](https://repl.it/languages/python3)
+                </section>
+				<section data-markdown>
+					Приложение для управляющего кофейни
+                </section>
+                <section data-markdown>
+                    У нашего приложения обязательно должно быть интерактивное меню, чтобы управляющий мог запросто управлять своей кофейней. 
+                </section>
+                <section data-markdown>
+                    В кофейне есть 10 столов, за каждым из которых может сидеть посетитель. Управляющий хотел бы знать, какой стол занят. 
+
+                    Если стол занят, то управляющему было бы полезно знать, как зовут посетителя за столом и что он заказал.
+                </section>
+                <section data-markdown>
+                    В кофейне есть 5 определенных пунктов меню (Кофе, Бутерброд, Торт, Чай, Вода), и они никогда не изменяются. 
+
+                    Управляющий спрашивает у посетителя о его заказе и выбирает номер пункта в нашем приложении.
+                </section>
+				<section>
+					👋
+				</section>
+			</div>
+		</div>
+
+		<script src="../reveal-js-src/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../reveal-js-src/plugin/markdown/marked.js' },
+					{ src: '../reveal-js-src/plugin/markdown/markdown.js' },
+					{ src: '../reveal-js-src/plugin/notes/notes.js', async: true },
+					{ src: '../reveal-js-src/plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
